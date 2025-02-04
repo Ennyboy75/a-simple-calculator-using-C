@@ -1,0 +1,11 @@
+// A voting system that checks if you are eligible to vote.
+#include <stdio.h>
+
+int main() {
+    int age;
+    printf("Enter age: ");
+    scanf("%d", &age);
+    
+    (age >= 18) ? printf("you are eligible to vote") : printf("you cannot vote");
+    return 0;
+}
