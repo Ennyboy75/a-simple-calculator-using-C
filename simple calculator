@@ -1,0 +1,48 @@
+// a simple calculator with two input
+#include <stdio.h>
+
+int main() {
+    int value1;
+    int value2;
+    char operation;
+    
+    printf("Enter value1: ");
+    scanf("%d", &value1);
+    
+    printf("Enter value2: ");
+    scanf("%d", &value2);
+
+    printf("Enter the operation(+,-,/,*): ");
+    scanf(" %c", &operation);
+    
+    int ResultAdd;
+    int ResultSub;
+    int ResultMultiplication;
+    double ResultDivision;
+    
+    if(operation == '+'){
+        ResultAdd =  value1 + value2;
+        printf("the result is: %d", ResultAdd);
+    }
+    else if(operation == '-'){
+        ResultSub = value1 - value2;
+        printf("\nThe result is: %d", ResultSub);
+    }
+    else if(operation == '*'){
+        ResultMultiplication = value1 * value2;
+        printf("\nThe result is: %d", ResultMultiplication);
+    }
+    else if(operation == '/'){
+          if(value2 == 0){
+            printf("Error: Divsion by zero is not allowed %d", value2);
+            return 1;
+          }
+        ResultDivision = (double)value1 / value2;
+        printf("\nThe result is: %.2lf", ResultDivision);
+    }
+    else{
+        printf("\nInvalid operaton %c", operation);
+    }
+   
+    return 0;
+}
