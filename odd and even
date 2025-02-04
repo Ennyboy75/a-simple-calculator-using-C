@@ -1,8 +1,8 @@
 // A voting system that checks if you are eligible to vote.
 #include <stdio.h>
 
-int main() {
-    int num1;
+int main() { 
+    int num1; // num is a library in C hence we can name num as a variable
     printf("Enter number: ");
     scanf("%d", &num1);
     
