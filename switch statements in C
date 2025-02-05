@@ -1,0 +1,28 @@
+// understanding switch statements
+#include <stdio.h>
+
+int main() {
+    int number;
+    
+    printf("Enter number between 1 to 3: ");
+    scanf(" %d", &number);
+    
+    switch(number){
+        case 1:
+        printf("the first alphabet is A");
+        break;
+        
+        case 2:
+        printf("the second alphabet is B");
+        break;
+        
+        case 3:
+        printf("the third alphabet is C");
+        break;
+        
+        default:
+        printf("invalid number");
+    }
+
+    return 0;
+}
