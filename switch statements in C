@@ -26,3 +26,36 @@ int main() {
 
     return 0;
 }
+we add a break statement after each of the lines since to terminate the code in each case. without the break statement, everything afterthat par
+particular case prints it self. e.g.
+// understanding switch statements
+#include <stdio.h>
+
+int main() {
+    int number;
+    
+    printf("Enter number between 1 to 3: ");
+    scanf(" %d", &number);
+    
+    switch(number){
+        case 1:
+        printf("the first alphabet is A");
+        
+        
+        case 2:
+        printf("the second alphabet is B");
+        
+        
+        case 3:
+        printf("the third alphabet is C");
+        
+        
+        default:
+        printf("invalid number");
+    }
+
+    return 0;
+}
+for the above code without break statement, the output will look like this:
+Enter number between 1 to 3: 1
+the first alphabet is Athe second alphabet is Bthe third alphabet is Cinvalid number
