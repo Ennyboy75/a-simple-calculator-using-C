@@ -1,0 +1,87 @@
+this a quiz from Chatgpt to reinforce the knowledge of ternary, conditional statement and switch statement.
+Task: Simple Calculator with Mode Selection
+Write a C program that:
+
+Prompts the user to choose a mode:
+
+1 for Basic Arithmetic (Addition, Subtraction, Multiplication, Division)
+2 for Even/Odd Check
+3 for Exit
+Uses a switch statement to handle the user’s choice:
+
+If the user selects Basic Arithmetic, prompt for two numbers and an operator (+, -, *, /).
+Use another switch to perform the operation and display the result.
+If the user selects Even/Odd Check, prompt for a number and use a ternary operator to determine and print whether the number is even or odd.
+If the user selects Exit, terminate the program.
+Handle invalid inputs gracefully.
+
+the answer to this quiz is given below:
+// understanding the switch statements
+#include <stdio.h>
+
+int main() {
+    
+    char choose_option;
+    printf("Enter option: ");
+    scanf(" %c", &choose_option);
+    
+    if(choose_option == '1'){
+        // Basic operation
+        char basic_operation;
+    
+    printf("choose operation +,-,/,*: ");
+    scanf(" %c", &basic_operation);
+    
+    double num1, num2;
+    printf("Enter num1: ");
+    scanf(" %lf", &num1);
+    
+    printf("\nEnter num2: ");
+    scanf(" %lf", &num2);
+    
+    double result;
+    
+    switch(basic_operation){
+        case '+':
+        result = num1 + num2;
+        printf("\nThe result is: %.2lf", result);
+        break;
+        
+        case '-':
+        result = num1 - num2;
+        printf("\nThe result is: %.2lf", result);
+        break;
+        
+        case '*':
+        result = num1 * num2;
+        printf("\nThe result is: %.2lf", result);
+        break;
+        
+        case '/':
+        if (num2 != 0) {
+            result = num1 / num2;
+            printf("The result is: %.2lf\n", result);
+            } else {
+            printf("Error: Division by zero is not allowed.\n");
+                
+       
+        break;
+        
+        default:
+        printf("invalid number");
+    }
+    printf("the result is: %.2lf", result);
+        
+    }  }else if(choose_option == '2'){
+        // Even Odd Check
+        int number;
+        printf("Enter the number: ");
+        scanf(" %d", &number);
+        
+        (number % 2 == 0) ? printf("it is an even number") : printf("it is an odd number");
+    }
+    
+
+
+    return 0;
+}
