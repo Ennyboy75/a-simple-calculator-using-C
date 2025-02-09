@@ -17,3 +17,24 @@ int main() {
 
     return 0;
 }
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int number;
+    printf("Number 'n': ");
+    scanf(" %d", &number);
+    
+    int count = 1;
+    
+    do{
+         int result = number * count;
+        printf(" \n %d * %d = %d",number, count, result);
+        count = count + 1;
+    }
+    while(count <= 12);
+    
+    
+
+    return 0;
+}
