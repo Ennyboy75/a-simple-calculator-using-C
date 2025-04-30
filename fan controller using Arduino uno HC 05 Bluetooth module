@@ -1,0 +1,33 @@
+//// the app implemented here was downloaded from Google Play.
+The app is called Arduino Bluetooth Controller. Specially designed for Arduino Bluetooth controls.
+
+
+
+#include <SoftwareSerial.h> 
+
+SoftwareSerial BTSerial(10, 11); // RX, TX (from HC-05’s TX, RX)
+
+#define RELAY_PIN 7
+char command;
+
+void setup() {
+  BTSerial.begin(9600);         // Bluetooth communication
+  pinMode(RELAY_PIN, OUTPUT);
+  digitalWrite(RELAY_PIN, HIGH); // Relay OFF (active LOW)
+}
+
+void loop() {
+  if (BTSerial.available()) {
+  char data = BTSerial.read();
+  Serial.println(data);
+
+  if (data == '1') {
+    digitalWrite(RELAY_PIN, LOW);  // Relay ON
+  }
+  else if (data == '0') {
+    digitalWrite(RELAY_PIN, HIGH); // Relay OFF
+  }
+  }
+  }
+
+
